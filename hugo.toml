@@ -68,7 +68,7 @@ target = '$1'
 
 ############################# Outputs ############################
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+home = ["HTML", "RSS", "WebAppManifest", "SearchIndex", 'DecapCMSConfig']
 
 ############################# Imaging ############################
 [imaging]
@@ -168,3 +168,36 @@ lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true
+
+[params.decap_cms]
+media_folder = "assets/images"
+public_folder = "/images"
+
+  [params.decap_cms.backend]
+  name = "git-gateway"
+  repo = "BricoleRafistole/hugoplate"
+  branch = "main"
+
+  [[params.decap_cms.collections]]
+  name = "pages"
+  label = "Pages"
+
+    [[params.decap_cms.collections.files]]
+    file = "content/english/_index.md"
+    label = "Home Page"
+    name = "home"
+
+      [[params.decap_cms.collections.files.fields]]
+      label = "Banniere"
+      name = "banner"
+      widget = "object"
+
+        [[params.decap_cms.collections.files.fields.fields]]
+        label = "Titre"
+        name = "title"
+        widget = "string"
+
+        [[params.decap_cms.collections.files.fields.fields]]
+        label = "Contenu"
+        name = "content"
+        widget = "text"

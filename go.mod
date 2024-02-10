@@ -25,4 +25,6 @@ require (
 	github.com/gethugothemes/hugo-modules/tab v0.0.0-20240207043320-fa42312441f5 // indirect
 	github.com/gethugothemes/hugo-modules/table-of-contents v0.0.0-20240207043320-fa42312441f5 // indirect
 	github.com/gethugothemes/hugo-modules/videos v0.0.0-20240207043320-fa42312441f5 // indirect
+	github.com/hugomods/decap-cms v0.14.0 // indirect
+	github.com/hugomods/hugopress v0.2.3 // indirect
 )
